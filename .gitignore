@@ -1,0 +1,8 @@
+dist
+node_modules
+build
+npm-debug.log
+.env
+.nvmrc
+.DS_Store
+.idea
