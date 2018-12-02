@@ -27,5 +27,9 @@
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-node-externals": "^1.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pugia/starter-rest-api.git "
   }
 }
