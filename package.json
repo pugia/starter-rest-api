@@ -2,7 +2,16 @@
   "name": "starter-rest-api",
   "version": "1.0.0",
   "description": "Boilerplate for REST API based on Node, Express, Typescript, MongoDB, build with Webpack",
-  "keywords": ["node", "express", "typescript", "mongodb", "mongoose", "webpack", "api", "rest"],
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "mongodb",
+    "mongoose",
+    "webpack",
+    "api",
+    "rest"
+  ],
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --colors",
