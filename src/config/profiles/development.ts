@@ -1,6 +1,6 @@
-import IConfig from '../../interfaces/config'
+import { IConfigProfile } from '../../interfaces/config'
 
-const development: IConfig = {
+const development: IConfigProfile = {
     db: {
         dbprotocol	: 'mongodb',
         dbhost 		: 'localhost',

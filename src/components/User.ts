@@ -1,4 +1,3 @@
-import * as mongoose from 'mongoose';
 import { User } from '../models/User';
 import { Request, Response } from 'express';
 import {IUser, IUserDocument} from "../interfaces/user";

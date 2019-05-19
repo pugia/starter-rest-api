@@ -15,7 +15,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --colors",
-    "start": "webpack --mode development --watch --colors"
+    "build:staging": "webpack --mode staging --colors",
+    "start": "webpack --mode development --watch --colors",
+    "start:debug": "webpack --display-error-details --mode development --watch --colors"
   },
   "author": "Marco Pugliese",
   "license": "MIT",

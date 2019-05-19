@@ -1,6 +1,6 @@
-import { IConfigProfile } from '../../interfaces/config'
+import { IConfigProfile} from "../../interfaces/config";
 
-const production: IConfigProfile = {
+const staging: IConfigProfile = {
     db: {
         dbprotocol	: 'mongodb',
         dbhost 		: 'localhost',
@@ -12,5 +12,4 @@ const production: IConfigProfile = {
     }
 };
 
-
-export default production;
+export default staging;

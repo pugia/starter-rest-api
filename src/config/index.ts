@@ -1,26 +1,29 @@
+import _common from './profiles/_common';
 import development from './profiles/development';
 import production from './profiles/production';
-import IConfig from "../interfaces/config";
+import staging from './profiles/staging';
+import { IConfig, Profiles } from "../interfaces/config";
 
 class Config {
 
     public config: IConfig;
-    public profile: string;
-
-    private static validProfile: Array<string> = ['development', 'production'];
 
     constructor() {
 
-        this.profile = Config.validProfile.indexOf(process.env.NODE_ENV) !== -1 ? process.env.NODE_ENV : Config.validProfile[0];
+        switch (process.env.NODE_ENV) {
+            case Profiles.Production:
+                this.config =  Object.assign({}, _common, production);
+                this.config.profile = Profiles.Production;
+                break;
 
-        switch (this.profile) {
-            case 'production':
-                this.config =  Object.assign({}, production);
+            case Profiles.Staging:
+                this.config =  Object.assign({}, _common, staging);
+                this.config.profile = Profiles.Staging;
                 break;
 
             default:
-                this.config =  Object.assign({}, development);
-
+                this.config =  Object.assign({}, _common, development);
+                this.config.profile = Profiles.Development;
         }
 
         this.config.db.dburl = this.config.db.dbprotocol + '://' + this.config.db.dbhost + '/' + this.config.db.dbname;
