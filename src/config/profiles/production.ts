@@ -9,7 +9,8 @@ const production: IConfigProfile = {
     },
     server: {
         port: 80
-    }
+    },
+    host: "https://api.site.com/"
 };
 
 

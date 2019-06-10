@@ -1,29 +1,30 @@
 interface IDBConfig {
-    dbprotocol: string;
-    dbhost: string;
-    dbport?: number;
-    dbname: string;
-    dburl?: string;
+    dbprotocol: string,
+    dbhost: string,
+    dbport?: number,
+    dbname: string,
+    dburl?: string,
 }
 
 interface IServerConfig {
-    port: number;
+    port: number,
 }
 
 export enum Profiles {
     Development = 'development',
     Production = 'production',
-    Staging = 'staging'
+    Staging = 'staging',
 }
 
 export interface IConfigCommon {
     profile: Profiles,
-    languages: string[]
+    languages: string[],
 }
 
 export interface IConfigProfile {
     db: IDBConfig,
-    server: IServerConfig
+    server: IServerConfig,
+    host: string,
 }
 
 export interface IConfig extends IConfigCommon, IConfigProfile {}

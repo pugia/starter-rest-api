@@ -9,7 +9,8 @@ const staging: IConfigProfile = {
     },
     server: {
         port: 80
-    }
+    },
+    host: 'http://staging.site.com/'
 };
 
 export default staging;
